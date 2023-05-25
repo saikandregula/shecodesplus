@@ -70,3 +70,10 @@ li.win {
 .search-form {
   margin-bottom: 20px;
 }
+a {
+  text-decoration: none;
+  padding-left: 280px;
+}
+.black {
+  color: black;
+}
