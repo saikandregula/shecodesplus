@@ -15,35 +15,47 @@
   </head>
   <body>
     <div class="container">
-      <div class="Weather-App">
-        <h1>New York</h1>
-        <ul>
-          <li>Tuesday 05:00</li>
-          <li>clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-              alt="cloudy"
-            />58°F|°C
-          </div>
-          <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>New York</h1>
             <ul>
-              <li>percipitation:</li>
-              <li>Humidity:</li>
-              <li>Wind:</li>
+              <li>Tuesday 05:00</li>
+              <li>clear</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="cloudy"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>58</strong
+                  ><span class="units">°F | <a href="#">°C</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <ul>
+                <li>percipitation:</li>
+                <li>Humidity:</li>
+                <li>Wind:</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <small>
+          <a
+            href="https://github.com/saikandregula/shecodesplus/tree/main/week-7/vanilla_weather_app"
+            target="_blank"
+            >Open Source Code</a
+          >by Sai Satya
+        </small>
       </div>
-      <small>
-        <a
-          href="https://github.com/saikandregula/shecodesplus/tree/main/week-7/vanilla_weather_app"
-          target="_blank"
-          >Open Source Code</a
-        >by Sai Satya
-      </small>
     </div>
     <script src="src/index.js"></script>
   </body>
