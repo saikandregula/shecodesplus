@@ -12,28 +12,28 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>New York</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>Tuesday 05:00</li>
-              <li>clear</li>
+              <li>last Updated: <span id="date">Tuesday 05:00</span></li>
+              <li id="description">clear</li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="clearfix weather-temperature">
+              <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                   alt="cloudy"
-                  class="float-left"
                 />
-                <div class="float-left">
-                  <strong>58</strong
+                <div>
+                  <strong id="temperature">58</strong
                   ><span class="units">°F | <a href="#">°C</a></span>
                 </div>
               </div>
@@ -42,8 +42,8 @@
             <div class="col-6">
               <ul>
                 <li>percipitation:</li>
-                <li>Humidity:</li>
-                <li>Wind:</li>
+                <li>Humidity:<span id="humidity"></span>%</li>
+                <li>Wind:<span id="wind"></span>mph</li>
               </ul>
             </div>
           </div>
