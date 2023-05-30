@@ -22,8 +22,9 @@ function formatDate(timestamp) {
 }
 
 let apiKey = "f2f8fa7c83899cc436t9bfbo024d31c4";
-let city = "New York";
+let city = "Atlanta";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+let icon_url = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/`;
 
 function displayTemperature(response) {
   const weatherData = response.data;
@@ -34,11 +35,17 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(weatherData.temperature.current);
   cityElement.innerHTML = weatherData.city;
   descriptionElement.innerHTML = weatherData.condition.description;
   humidityElement.innerHTML = weatherData.temperature.humidity;
   windElement.innerHTML = weatherData.wind.speed;
   dateElement.innerHTML = formatDate(weatherData.time * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png`
+  );
+  iconElement.setAttribute("alt", weatherData.condition.icon);
 }
 axios.get(apiUrl).then(displayTemperature);
